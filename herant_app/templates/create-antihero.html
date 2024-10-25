@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{% static 'js/create-antihero.js'%}"></script>
+    <link rel="stylesheet" href="{% static 'css/create-antihero.css'%}">
+    <link rel="icon" href="{% static '../static/images/herant-logo-svg.svg'%}" type="image/x-icon">
+    <title>Herant | Criar anti-heroi</title>
+</head>
+
+<body>
+    <nav class="box-navbar">
+        <div class="navbar">
+            <a href="{% url 'home'%}" class="link-logo-navbar">
+                <img src="../static/images/herant-logo-svg.svg" class="image-logo-navbar">
+            </a>
+            <a href="{% url 'list-antiheroes'%}" class="link-item-navbar">Lista</a>
+            <a href="{% url 'search-antihero'%}" class="link-item-navbar">Buscar</a>
+        </div>
+    </nav>
+    <div class="box-title-page">
+        <h1 class="title-page">Criar anti-heroi</h1>
+    </div>
+    <div class="box-form">
+        <form method="post" onsubmit="submitAntihero(event)">
+            {% csrf_token %}
+            <div class="box-label-plus-input">
+                <label for="name" class="label-for-form">Nome</label>
+                <input type="text" id="name" name="name" required class="input-for-name">
+            </div>
+            <div class="box-label-plus-input">
+                <label for="history" class="label-for-form">Historia</label>
+                <textarea id="history" name="history" required class="input-for-history"></textarea>
+            </div>
+            <button type="submit" class="btn-for-submit">Enviar</button>
+        </form>
+    </div>
+    <div class="box-to-link-for-hero-created">
+        
+    </div>
+</body>
+
+</html>

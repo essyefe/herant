@@ -1,0 +1,33 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/select-antihero.css'%}">
+        <link rel="icon" href="{% static '../static/images/herant-logo-svg.svg'%}">
+        <title>Herant | Buscar anti-heroi</title>
+</head>
+<body>
+    <nav class="box-navbar">
+        <div class="navbar">
+            <a href="{% url 'home'%}" class="link-logo-navbar">
+                <img src="../static/images/herant-logo-svg.svg" class="image-logo-navbar">
+            </a>
+            <a href="{% url 'list-antiheroes'%}" class="link-item-navbar">Listar</a>
+            <a href="{% url 'create-antihero-page'%}" class="link-item-navbar">Criar</a>
+        </div>
+    </nav>
+    <div class="box-input-main">
+        <h1 class="title-select">Buscar anti-heroi</h1>
+        <div class="box-to-inputs">
+            <input type="text" class="text-to-select">
+            <button class="btn-to-select" onclick="getAntiHero()">Selecionar</button>
+        </div>
+    </div>
+    <div class="box-api-elements">
+        
+    </div>
+    <script src="{% static 'js/select-antihero.js' %}"></script>
+</body>
+</html>

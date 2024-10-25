@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{% static 'js/acess-antihero.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/acess-antihero.css'%}"></link>
+    <link rel="icon" href="{% static '../static/images/herant-logo-svg.svg'%}">
+    <title> | Acessar anti-heropi</title>
+</head>
+<body>
+    <nav class="box-navbar">
+        <div class="navbar">
+            <a href="{% url 'home'%}" class="link-logo-navbar">
+                <img src="../static/images/herant-logo-svg.svg" class="image-logo-navbar">
+            </a>
+            <a href="{% url 'list-antiheroes'%}" class="link-item-navbar">Listar</a>
+            <a href="{% url 'search-antihero'%}" class="link-item-navbar">Buscar</a>
+            <a href="{% url 'create-antihero-page'%}" class="link-item-navbar">Criar</a>
+        </div>
+    </nav>
+    <div class="box-texts">
+        <h1></h1>
+        <p></p>
+    </div>
+</body>
+</html>

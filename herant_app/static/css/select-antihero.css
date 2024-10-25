@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+
+/**/
+
+:root {
+    --smooth-red: #FF5C5C; 
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+body::before {
+    position: absolute;
+    background-color: black;
+    background-image: url('../images/the-punisher.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(3px);
+    inset: 0;
+    content: '';
+    z-index: -1;
+    opacity: 0.3;
+    background-color: black;
+}
+
+.box-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 15vmin;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    border-bottom: 1px solid rgb(119, 119, 119);
+    gap: 4vmin;
+}
+
+.link-logo-navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2vmin;
+    width: 4%;
+}
+
+.image-logo-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    border-radius: 3px;
+}
+
+.link-item-navbar {
+    font-family: "Rethink", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 2.2vmin;
+    transition: 0.4s;
+}
+
+.link-item-navbar:hover {
+    color: gray;
+
+}
+
+/**/
+
+.box-input-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 2vmin;
+}
+
+.title-select {
+    font-size: 12vmin;
+    font-family: "Rethink", sans-serif;
+    color: white;
+    width: 90%;
+    padding-bottom: 2vmin;
+}
+
+.box-to-inputs {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    padding: 1vmin;
+    height: 12vmin;
+    gap: 2vmin;
+}
+
+.text-to-select {
+    border-radius: 3px;
+    border: none;
+    height: 100%;
+    width: 30%;
+    padding-left: 3vmin;
+    font-family: "Rethink", sans-serif;
+    font-weight: 700;
+    color: #FF5C5C;
+    font-size: 2.5vmin;
+    transition: 0.5s;
+}
+
+.text-to-select:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.575);
+}
+
+.btn-to-select {
+    height: 100%;
+    width: 15%;
+    background-color: var(--smooth-red);
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-weight: 500;
+    font-size: 2.7vmin;
+    transition: 0.5s;
+}
+
+.btn-to-select:hover {
+    background-color: red;
+    box-shadow: 0 0 30px 0 red;
+}
+
+/**/
+
+.box-api-elements {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 10vmin;
+    padding-top: 5vmin;
+    gap: 2vmin;
+    color: red;
+}
+
+.antihero-name {
+    font-size: 10vmin;
+    color: white;
+    font-weight: 700;
+    font-family: "Rethink", sans-serif;
+    width: 90%;
+    animation: spawn 0.2s;
+}
+
+.antihero-history {
+    color: white;
+    font-weight: 300;
+    font-size: 2.5vmin;
+    font-family: "Rethink", sans-serif;
+    width: 50%;
+    padding: 5vmin;
+    border: 1px solid rgb(155, 155, 155);
+    border-radius: 3px;
+    animation: spawn 0.4s;
+    color: white;
+}
+
+.error-message {
+    font-size: 8vmin;
+    font-family: "Rethink", sans-serif;
+    font-weight: 700;
+    padding: 4vmin;
+    width: 40%;
+    color: white;
+    border-radius: 3px;
+    animation: spawn 0.2s;
+    text-align: center;
+    box-shadow: 0 0 20px 0 #FF5C5C;
+    background-color: #FF5C5C;
+}
+
+@keyframes spawn {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media (max-width : 600px) {
+    .title-select {
+        font-size: 8vmin;
+    }
+
+    .text-to-select {
+        width: 80%;
+    }
+
+    .btn-to-select {
+        width: 20%;
+    }
+
+    .box-api-elements {
+        align-items: center;
+        padding: 10vmin 0 0 0;
+    }
+
+    .error-message {
+        width: 80%;
+    }
+
+    .antihero-history {
+        width: 90%;
+    }
+}
+

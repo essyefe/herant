@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+
+/**/
+
+:root {
+    --smooth-red: #FF5C5C; 
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+body::before {
+    position: absolute;
+    background-color: black;
+    background-image: url('../images/antihero-template.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(3px);
+    inset: 0;
+    content: '';
+    z-index: -1;
+    opacity: 0.3;
+    background-color: black;
+}
+
+.box-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 15vmin;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    border-bottom: 1px solid rgb(119, 119, 119);
+    gap: 4vmin;
+}
+
+.link-logo-navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2vmin;
+    width: 4%;
+}
+
+.image-logo-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    border-radius: 3px;
+}
+
+.link-item-navbar {
+    font-family: "Rethink", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 2.2vmin;
+    transition: 0.4s;
+}
+
+.link-item-navbar:hover {
+    color: gray;
+
+}
+
+/**/
+
+h1 {
+    color: white;
+    font-family: "Rethink", sans-serif;
+    width: 90%;
+    font-size: 12vmin;
+}
+
+p {
+    color: white;
+    font-family: "Rethink", sans-serif;
+    width: 90%;
+    color: #b8b8b8;
+}
+
+.box-texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4vmin;
+    height: 50vmin;
+}
+
+@media (max-width : 600px) {
+
+    h1 {
+        font-size: 8vmin;
+    }
+
+    p {
+        font-size: 3vmin;
+    }
+}
